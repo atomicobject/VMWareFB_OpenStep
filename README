@@ -1,0 +1,115 @@
+
+Copyright (C) 2002 Atomic Object LLC
+All Rights Reserved.
+
+http://atomicobject.com/
+info@atomicobject.com
+
+
+The code here may be used/distributed under the terms of the standard
+XFree86 license.
+
+VMWareFB OpenStep Display Driver for VMWare
+-------------------------------------------
+
+ - Overview
+ - Known Issues
+ - Installation
+ - Building the Source
+
+
+Overview
+--------
+
+VMWareFB is an OpenStep display driver written to support the virtual
+display hardware in VMWare. It has been tested with VMWare Workstation
+3.0 on Linux, Windows 2000 and Windows XP.
+
+The driver works very well on Linux, especially in full screen mode.
+There are some problems with initialization of the device on Windows XP,
+but once running, it seems very stable.
+
+Support for other versions of VMWare is unknown. Please report any 
+experiences with the Express and Server versions.
+
+
+DISCLAIMER: This is an initial release of a driver that still has some
+problems, especially when running on a Windows host. We can not claim
+that this driver will work well or at all on your computer. We
+developed this driver for the specific purpose of running a few
+applications, and haven't extensively tested it with various software
+or hardware configurations
+
+All we can say is that it works fine for what we need.
+
+Known Issues
+------------
+
+ - Panics on startup. Occasionally, usually after first installing
+   the driver, OpenStep will crash with a panic just after the driver
+   finishes initializing. The specific crash is usually a problem
+   with "pmap_remove_range 2". These crashes have rarely occurred on
+   Linux or Windows 2000. On Windows XP the crashes happen _very_ often
+   (every cold power on). After one or two reboots it does work,
+   even on XP.
+
+   Once booted up OpenStep seems to run just fine. It is recommended
+   that you use the Suspend and Resume to start and stop the VM.
+   
+ - No Acceleration. This driver does not use the command FIFO in the
+   VMWare device to accelerate updates of the screen. On Windows, and in
+   a window on Linux uses a "trace" mode in VMWare to update the
+   display. This method is inherently slow and occasionally leaves bits
+   of graphical garbage on the screen which do get cleaned up and don't
+   affect operation of the virtual machine. But performance is generally
+   acceptable.
+
+   On Linux in fullscreen mode updates go directly to the video hardware,
+   and these performance and visual problems don't happen.
+
+-  Limitations on host color depth. OpenStep (or at least this driver)
+   can only handle 12/16, 15/16 or 24/32 depth/bits-per-pixel. Because
+   the VMWare display must run at the same depth as the host, this 
+   limitation may require you to change the display properties of the
+   host. On Linux, this usually involves running X at 15 or 24 bpp.
+   On Windows, 32 and 15 depth should always work, 24 or 16 depth might, 
+   depending on the specific video hardware (whether 24bpp is actually
+   3 bytes per pixel or 4, and if 16 uses a 555 or 565 color weight).
+
+   The driver will give up if it finds itself on an unsupported depth,
+   and the Default VGA driver will be used. The reason will be logged.
+
+   8-bit pseudocolor mode is currently unsupported.
+
+Installation
+------------
+
+The VMWare Display Driver installs just like any other OpenStep
+display driver. The quick-start method is:
+
+ 1. Open /NextAdmin/Configure.app and remove the current display driver.
+    Save. Confirm the warnings. Quit.
+ 2. Double-click on VMWareFB.config, and confirm the installation
+    (or update) of the driver.
+ 3. Select the Display tab. The Add Display Devices... panel should pop
+    up automatically (if not, click Add). "VMWare Display Adapter"
+    should automatically be detected. Click Add.
+ 4. Click Select to choose your display resolution. All the modes
+    are shown as 32-bit depth, but the actual depth used will depend
+    on the host system on which VMWare is running. The driver has only
+    been successfully tested at a maximum of 1280x1024x32bpp. Higher
+    resolutions should work, though.
+ 5. Save and reboot. YOU MAY NEED TO REBOOT TWO OR THREE TIMES IF
+    OPENSTEP CRASHES. Let it reboot, rather than powering off and
+    on the virtual machine when it crashes. When it eventually boots
+    successfully, it should be stable.
+
+Building the Source
+-------------------
+
+VMWareFB can be built using Project Builder on NextStep 3.3. _It will
+NOT compile on OpenStep!_ Make sure to build for a i386 architecture
+if compiling on a non-Intel architecture.
+
+-- 
+$Id$

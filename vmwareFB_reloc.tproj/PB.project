@@ -1,0 +1,16 @@
+FILESTABLE = {
+    OTHER_SOURCES = (Makefile.preamble, Makefile, Makefile.postamble, Makefile.driver_preamble, Load_Commands.sect);
+    H_FILES = (guest_os.h, includeCheck.h, svga_limits.h, svga_reg.h, vmware.h, VMWareFB.h, vm_basic_types.h, vm_device_version.h);
+    OTHER_LINKED = ();
+    CLASSES = (VMWareFB.m, VMWareFBAccel.m, VMWareFBRegisters.m, VMWareFBUtility.m);
+    C_FILES = (vmware.c);
+};
+LOCALIZABLE_FILES = {
+};
+LANGUAGE = English;
+PROJECTVERSION = 1.1;
+INSTALLDIR = "";
+PROJECTNAME = VMWareFB_reloc;
+PROJECTTYPE = Tool;
+GENERATEMAIN = YES;
+DOCICONFILES = ();

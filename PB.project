@@ -1,0 +1,23 @@
+INSTALLDIR = "";
+COMPILEROPTIONS = "";
+GENERATEMAIN = YES;
+DOCICONFILES = ();
+FILESTABLE = {
+    OTHER_SOURCES = (Makefile, Makefile.postamble, Makefile.preamble);
+    OTHER_RESOURCES = (Default.table, Display.modes, Info.rtf);
+    OTHER_LIBS = (Indexing_s);
+    STRINGS_FILES = (Localizable.strings);
+    TOOLS = (vmwareFB_reloc.tproj);
+    SUBPROJECTS = ();
+};
+BUNDLE_EXTENSION = config;
+LINKEROPTIONS = "";
+DOCEXTENSIONS = ();
+PROJECTTYPE = Bundle;
+PROJECTVERSION = 1.1;
+LOCALIZABLE_FILES = {
+    Info.rtf;
+    Localizable.strings;
+};
+PROJECTNAME = VMWareFB;
+LANGUAGE = English;
