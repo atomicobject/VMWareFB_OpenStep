@@ -539,12 +539,29 @@ static const IODisplayInfo modeTable[] = {
 	/* Get memory ranges from device description */
 	range = [deviceDescription memoryRangeList];
 
-	VMLog("VMWareFB: frame
+	VMLog("VMWareFB: framebuffer range: 0x%08x-0x%08x\n", 
+		range[FB_MEMRANGE].start,
+		range[FB_MEMRANGE].start +range[FB_MEMRANGE].size);
+
+	VMLog("VMWareFB: framebuffer size: 0x%08x\n",
+		range[FB_MEMRANGE].size);
 	
 	/* map frame buffer. */	
-	displayInfo->frameBuffer = (void *)
-		[self mapFrameBufferAtPhysicalAddress: range[FB_MEMRANGE].start
-					length: range[FB_MEMRANGE].size ];
+	if( [self mapMemoryRange: FB_MEMRANGE
+						to: (vm_address_t *)&(displayInfo->frameBuffer)
+						findSpace: YES
+						cache: IO_DISPLAY_CACHE_WRITETHROUGH] != IO_R_SUCCESS) 
+	{
+		IOLog("VMWareFB: problem mapping framebuffer.\n");
+		return [super free];
+	}
+	
+	// 2002-02-14: old way of mapping frame buffer
+	//displayInfo->frameBuffer = (void *)
+	//	[self mapFrameBufferAtPhysicalAddress: range[FB_MEMRANGE].start
+	//				length: range[FB_MEMRANGE].size ];
+
+
 	if(displayInfo->frameBuffer == 0) 
 	{
 		IOLog("VMWareFB: couldn't map frame buffer memory!\n");
