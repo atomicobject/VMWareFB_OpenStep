@@ -78,38 +78,38 @@ display driver. The quick-start method is:
 
 == Known Issues
 
- * Panics on startup. Occasionally, usually after first installing
-   the driver, OpenStep will crash with a panic just after the driver
-   finishes initializing. The specific crash is usually a problem
-   with "pmap_remove_range 2". These crashes have rarely occurred on
-   Linux or Windows 2000. On Windows XP the crashes happen _very_ often
-   (every cold power on). After one or two reboots it does work,
-   even on XP.
+* Panics on startup. Occasionally, usually after first installing
+ the driver, OpenStep will crash with a panic just after the driver
+ finishes initializing. The specific crash is usually a problem
+ with "pmap_remove_range 2". These crashes have rarely occurred on
+ Linux or Windows 2000. On Windows XP the crashes happen _very_ often
+ (every cold power on). After one or two reboots it does work,
+ even on XP.
 
-   Once booted up OpenStep seems to run just fine. It is recommended
-   that you use the Suspend and Resume to start and stop the VM.
-   
- * No Acceleration. This driver does not use the command FIFO in the
-   VMWare device to accelerate updates of the screen. On Windows, and in
-   a window on Linux uses a "trace" mode in VMWare to update the
-   display. This method is inherently slow and occasionally leaves bits
-   of graphical garbage on the screen which do get cleaned up and don't
-   affect operation of the virtual machine. But performance is generally
-   acceptable.
+ Once booted up OpenStep seems to run just fine. It is recommended
+ that you use the Suspend and Resume to start and stop the VM.
+ 
+* No Acceleration. This driver does not use the command FIFO in the
+ VMWare device to accelerate updates of the screen. On Windows, and in
+ a window on Linux uses a "trace" mode in VMWare to update the
+ display. This method is inherently slow and occasionally leaves bits
+ of graphical garbage on the screen which do get cleaned up and don't
+ affect operation of the virtual machine. But performance is generally
+ acceptable.
 
-   On Linux in fullscreen mode updates go directly to the video hardware,
-   and these performance and visual problems don't happen.
+ On Linux in fullscreen mode updates go directly to the video hardware,
+ and these performance and visual problems don't happen.
 
- * Limitations on host color depth. OpenStep (or at least this driver)
-   can only handle 12/16, 15/16 or 24/32 depth/bits-per-pixel. Because
-   the VMWare display must run at the same depth as the host, this 
-   limitation may require you to change the display properties of the
-   host. On Linux, this usually involves running X at 15 or 24 bpp.
-   On Windows, 32 and 15 depth should always work, 24 or 16 depth might, 
-   depending on the specific video hardware (whether 24bpp is actually
-   3 bytes per pixel or 4, and if 16 uses a 555 or 565 color weight).
+* Limitations on host color depth. OpenStep (or at least this driver)
+ can only handle 12/16, 15/16 or 24/32 depth/bits-per-pixel. Because
+ the VMWare display must run at the same depth as the host, this 
+ limitation may require you to change the display properties of the
+ host. On Linux, this usually involves running X at 15 or 24 bpp.
+ On Windows, 32 and 15 depth should always work, 24 or 16 depth might, 
+ depending on the specific video hardware (whether 24bpp is actually
+ 3 bytes per pixel or 4, and if 16 uses a 555 or 565 color weight).
 
-   The driver will give up if it finds itself on an unsupported depth,
-   and the Default VGA driver will be used. The reason will be logged.
+ The driver will give up if it finds itself on an unsupported depth,
+ and the Default VGA driver will be used. The reason will be logged.
 
-   8-bit pseudocolor mode is currently unsupported.
+ 8-bit pseudocolor mode is currently unsupported.
