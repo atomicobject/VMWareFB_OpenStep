@@ -3,9 +3,9 @@
 Copyright (C) 2002-2010 Atomic Object LLC
 All Rights Reserved.
 
-http://atomicobject.com/
-http://github.com/atomicobject/VMWareFB_OpenStep/
-github@atomicobject.com
+* http://atomicobject.com/
+* http://github.com/atomicobject/VMWareFB_OpenStep/
+* github@atomicobject.com
 
 The code here may be used/distributed under the terms of the standard
 XFree86 license.
@@ -113,3 +113,10 @@ display driver. The quick-start method is:
    and the Default VGA driver will be used. The reason will be logged.
 
    8-bit pseudocolor mode is currently unsupported.
+
+== Credits
+
+* This work wouldn't have been possible without Laurent Julliard and his website describing how to install OpenStep in VMWare: http://www.moldus.org/~laurent/GNUstep/OS42_Install.html
+* Alex and Jeremy at VMware (http://www.vmware.com) were great resources for any questions we had.
+* Thanks to Andreas G for rounding up and sharing instructions for resolutions above 1024.
+* Valley City Linen (http://www.vcl.com) funded the development of this driver.
