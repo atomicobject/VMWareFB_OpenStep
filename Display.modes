@@ -1,6 +1,18 @@
 "Height: 480 Width: 640 Refresh: 60Hz ColorSpace: RGB:888/32";
 "Height: 600 Width: 800 Refresh: 60Hz ColorSpace: RGB:888/32";
 "Height: 768 Width:1024 Refresh: 60Hz ColorSpace: RGB:888/32";
+"Height: 864 Width:1152 Refresh: 60Hz ColorSpace: RGB:888/32";
+"Height: 720 Width:1280 Refresh: 60Hz ColorSpace: RGB:888/32";
+"Height: 768 Width:1280 Refresh: 60Hz ColorSpace: RGB:888/32";
+"Height: 800 Width:1280 Refresh: 60Hz ColorSpace: RGB:888/32";
+"Height: 960 Width:1280 Refresh: 60Hz ColorSpace: RGB:888/32";
 "Height:1024 Width:1280 Refresh: 60Hz ColorSpace: RGB:888/32";
+"Height: 768 Width:1366 Refresh: 60Hz ColorSpace: RGB:888/32";
+"Height: 900 Width:1440 Refresh: 60Hz ColorSpace: RGB:888/32";
 "Height:1200 Width:1600 Refresh: 60Hz ColorSpace: RGB:888/32";
+"Height:1050 Width:1680 Refresh: 60Hz ColorSpace: RGB:888/32";
+"Height:1080 Width:1920 Refresh: 60Hz ColorSpace: RGB:888/32";
+"Height:1200 Width:1920 Refresh: 60Hz ColorSpace: RGB:888/32";
+"Height:1440 Width:2560 Refresh: 60Hz ColorSpace: RGB:888/32";
+"Height:1600 Width:2560 Refresh: 60Hz ColorSpace: RGB:888/32";
 "Height:1773 Width:2364 Refresh: 60Hz ColorSpace: RGB:888/32";

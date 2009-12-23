@@ -5,7 +5,7 @@
  * VMWareFB.m -- driver for VMWare display driver
  *
  * Created by Bill Bereza 2001/01/17
- * $Id$
+ * $Id: VMWareFB.m,v 1.2 2002/02/14 22:37:38 bereza Exp $
  */
 
 #import "VMWareFB.h"
@@ -49,6 +49,41 @@ static const IODisplayInfo modeTable[] = {
 	}
 	,
 	{
+		/* 1152 x 864, RGB:888/32 */
+		1152, 864, 1152, 4608, 60, 0,
+		IO_24BitsPerPixel, IO_RGBColorSpace, "--------RRRRRRRRGGGGGGGGBBBBBBBB",
+		0, 0
+	}
+	,
+	{
+		/* 1280 x 720, RGB:888/32 */
+		1280, 720, 1280, 5120, 60, 0,
+		IO_24BitsPerPixel, IO_RGBColorSpace, "--------RRRRRRRRGGGGGGGGBBBBBBBB",
+		0, 0
+	}
+	,
+	{
+		/* 1280 x 768, RGB:888/32 */
+		1280, 768, 1280, 5120, 60, 0,
+		IO_24BitsPerPixel, IO_RGBColorSpace, "--------RRRRRRRRGGGGGGGGBBBBBBBB",
+		0, 0
+	}
+	,
+	{
+		/* 1280 x 800, RGB:888/32 */
+		1280, 800, 1280, 5120, 60, 0,
+		IO_24BitsPerPixel, IO_RGBColorSpace, "--------RRRRRRRRGGGGGGGGBBBBBBBB",
+		0, 0
+	}
+	,
+	{
+		/* 1280 x 960, RGB:888/32 */
+		1280, 960, 1280, 5120, 60, 0,
+		IO_24BitsPerPixel, IO_RGBColorSpace, "--------RRRRRRRRGGGGGGGGBBBBBBBB",
+		0, 0
+	}
+	,
+	{
 		/* 1280 x 1024, RGB:888/32 */
 		1280, 1024, 1280, 5120, 60, 0,
 		IO_24BitsPerPixel, IO_RGBColorSpace, "--------RRRRRRRRGGGGGGGGBBBBBBBB",
@@ -56,8 +91,57 @@ static const IODisplayInfo modeTable[] = {
 	}
 	,
 	{
+		/* 1366 x 768, RGB:888/32 */
+		1366, 768, 1366, 5464, 60, 0,
+		IO_24BitsPerPixel, IO_RGBColorSpace, "--------RRRRRRRRGGGGGGGGBBBBBBBB",
+		0, 0
+	}
+	,
+	{
+		/* 1440 x 900, RGB:888/32 */
+		1440, 900, 1440, 5760, 60, 0,
+		IO_24BitsPerPixel, IO_RGBColorSpace, "--------RRRRRRRRGGGGGGGGBBBBBBBB",
+		0, 0
+	}
+	,
+	{
 		/* 1600 x 1200, RGB:888/32 */
 		1600, 1200, 1600, 6400, 60, 0,
+		IO_24BitsPerPixel, IO_RGBColorSpace, "--------RRRRRRRRGGGGGGGGBBBBBBBB",
+		0, 0
+	}
+	,
+	{
+		/* 1680 x 1050, RGB:888/32 */
+		1680, 1050, 1680, 6720, 60, 0,
+		IO_24BitsPerPixel, IO_RGBColorSpace, "--------RRRRRRRRGGGGGGGGBBBBBBBB",
+		0, 0
+	}
+	,
+	{
+		/* 1920 x 1080, RGB:888/32 */
+		1920, 1080, 1920, 7680, 60, 0,
+		IO_24BitsPerPixel, IO_RGBColorSpace, "--------RRRRRRRRGGGGGGGGBBBBBBBB",
+		0, 0
+	}
+	,
+	{
+		/* 1920 x 1200, RGB:888/32 */
+		1920, 1200, 1920, 7680, 60, 0,
+		IO_24BitsPerPixel, IO_RGBColorSpace, "--------RRRRRRRRGGGGGGGGBBBBBBBB",
+		0, 0
+	}
+	,
+	{
+		/* 2560 x 1440, RGB:888/32 */
+		2560, 1440, 2560, 10240, 60, 0,
+		IO_24BitsPerPixel, IO_RGBColorSpace, "--------RRRRRRRRGGGGGGGGBBBBBBBB",
+		0, 0
+	}
+	,
+	{
+		/* 2560 x 1600, RGB:888/32 */
+		2560, 1600, 2560, 10240, 60, 0,
 		IO_24BitsPerPixel, IO_RGBColorSpace, "--------RRRRRRRRGGGGGGGGBBBBBBBB",
 		0, 0
 	}
