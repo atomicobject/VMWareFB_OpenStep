@@ -29,28 +29,6 @@ VMWareFB can be built using Project Builder on NextStep 3.3. _It will
 NOT compile on OpenStep!_ Make sure to build for a i386 architecture
 if compiling on a non-Intel architecture.
 
-== Adding additional resolutions to the VMWareFB display driver
-(Thanks! to Andreas Grabher for contributing these instructions December 2009)
-
-Open the file "VMWareFB.m" (from the folder "vmwareFB_reloc.tproj") using
-TextEdit.app and add your resolution to the modeTable:
-
-  {
-    /* width x height, RGB:888/32 */
-    width, height, width, width*4, 60, 0,
-    IO_24BitsPerPixel, IO_RGBColorSpace, "--------RRRRRRRRGGGGGGGGBBBBBBBB",
-    0, 0
-  }
-
-Open the file "Display.modes" (from the main folder) using TextEdit.app and add
-your resolution to the list.
-
-Compile the driver using ProjectBuilder.app and install it using Configure.app.
-
-In the display settings of Configure.app choose your resolution. Change the
-mapped memory to "0xD0000000". Do not forget to change the settings of the
-mouse driver, then restart the operating system.
-
 == Installation
 
 You can download a precompiled driver as a compressed config from 
@@ -141,5 +119,5 @@ As of 1.1.0, Video modes now supported (all @60Hz, with color space RGB:888/32):
 
 * This work wouldn't have been possible without Laurent Julliard and his website describing how to install OpenStep in VMWare: http://www.moldus.org/~laurent/GNUstep/OS42_Install.html
 * Alex and Jeremy at VMware (http://www.vmware.com) were great resources for any questions we had.
-* Thanks to Andreas G for rounding up and sharing instructions for resolutions above 1024.
+* Thanks to Andreas Grabher and others at www.nextcomputers.org for rounding up knowledge and submitting the patch for increased video mode support above 1024x768.
 * Valley City Linen (http://www.vcl.com) funded the development of this driver.
