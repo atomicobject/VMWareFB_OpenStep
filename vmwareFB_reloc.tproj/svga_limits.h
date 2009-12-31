@@ -51,7 +51,7 @@
  * chipset, the framebuffer start is determined solely based on the value
  * the guest BIOS or OS programs into the PCI base address registers.
  */
-#define SVGA_FB_LEGACY_START		0xD0000000
+#define SVGA_FB_LEGACY_START		0x7EFC0000
 #define SVGA_FB_LEGACY_START_BIGMEM	0xE0000000
 
 #endif

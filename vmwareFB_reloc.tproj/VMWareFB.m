@@ -145,13 +145,6 @@ static const IODisplayInfo modeTable[] = {
 		IO_24BitsPerPixel, IO_RGBColorSpace, "--------RRRRRRRRGGGGGGGGBBBBBBBB",
 		0, 0
 	}
-	,
-	{
-		/* 2364 x 1773, RGB:888/32 */
-		2364, 1773, 2364, 9456, 60, 0,
-		IO_24BitsPerPixel, IO_RGBColorSpace, "--------RRRRRRRRGGGGGGGGBBBBBBBB",
-		0, 0
-	}
 };
 
 #define modeTableCount (sizeof(modeTable) / sizeof(IODisplayInfo))
