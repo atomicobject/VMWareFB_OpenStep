@@ -3,9 +3,9 @@
 The code here may be used/distributed under the terms of the standard
 XFree86 license.
 
-_Note: This project is no longer actively maintained. If you're
+<em>Note: This project is no longer actively maintained. If you're
 interested in taking ownership of this code, contact David Crosby
-(crosby@atomicobject.com)._
+(crosby@atomicobject.com).</em>
 
 == Overview
 
@@ -22,9 +22,9 @@ experiences with the Express and Server versions.
 
 == Building the Source
 
-VMWareFB can be built using Project Builder on NextStep 3.3. _It will
+VMWareFB can be built using Project Builder on NextStep 3.3. <em>It will
 NOT compile on OpenStep!_ Make sure to build for a i386 architecture
-if compiling on a non-Intel architecture.
+if compiling on a non-Intel architecture.</em>
 
 == Installation
 
