@@ -23,8 +23,8 @@ experiences with the Express and Server versions.
 == Building the Source
 
 VMWareFB can be built using Project Builder on NextStep 3.3. <em>It will
-NOT compile on OpenStep!_ Make sure to build for a i386 architecture
-if compiling on a non-Intel architecture.</em>
+NOT compile on OpenStep!</em> Make sure to build for a i386 architecture
+if compiling on a non-Intel architecture.
 
 == Installation
 
