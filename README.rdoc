@@ -1,12 +1,5 @@
 == VMWareFB OpenStep Display Driver for VMWare
 
-Copyright (C) 2002-2010 Atomic Object LLC
-All Rights Reserved.
-
-* http://atomicobject.com/
-* http://github.com/atomicobject/VMWareFB_OpenStep/
-* github@atomicobject.com
-
 The code here may be used/distributed under the terms of the standard
 XFree86 license.
 
@@ -20,7 +13,7 @@ The driver works very well on Linux, especially in full screen mode.
 There are some problems with initialization of the device on Windows XP,
 but once running, it seems very stable.
 
-Support for other versions of VMWare is unknown. Please report any 
+Support for other versions of VMWare is unknown. Please report any
 experiences with the Express and Server versions.
 
 == Building the Source
@@ -31,7 +24,7 @@ if compiling on a non-Intel architecture.
 
 == Installation
 
-You can download a precompiled driver as a compressed config from 
+You can download a precompiled driver as a compressed config from
   http://github.com/atomicobject/VMWareFB_OpenStep/downloads
 
 The VMWare Display Driver installs just like any other OpenStep
@@ -66,7 +59,7 @@ display driver. The quick-start method is:
 
    Once booted up OpenStep seems to run just fine. It is recommended
    that you use the Suspend and Resume to start and stop the VM.
-   
+
  * No Acceleration. This driver does not use the command FIFO in the
    VMWare device to accelerate updates of the screen. On Windows, and in
    a window on Linux uses a "trace" mode in VMWare to update the
@@ -80,10 +73,10 @@ display driver. The quick-start method is:
 
  * Limitations on host color depth. OpenStep (or at least this driver)
    can only handle 12/16, 15/16 or 24/32 depth/bits-per-pixel. Because
-   the VMWare display must run at the same depth as the host, this 
+   the VMWare display must run at the same depth as the host, this
    limitation may require you to change the display properties of the
    host. On Linux, this usually involves running X at 15 or 24 bpp.
-   On Windows, 32 and 15 depth should always work, 24 or 16 depth might, 
+   On Windows, 32 and 15 depth should always work, 24 or 16 depth might,
    depending on the specific video hardware (whether 24bpp is actually
    3 bytes per pixel or 4, and if 16 uses a 555 or 565 color weight).
 
@@ -100,7 +93,7 @@ As of 1.1.0, Video modes now supported (all @60Hz, with color space RGB:888/32):
   600 x  800
   768 x 1024
   864 x 1152
-  720 x 1280 
+  720 x 1280
   768 x 1280
   800 x 1280
   960 x 1280
@@ -114,6 +107,14 @@ As of 1.1.0, Video modes now supported (all @60Hz, with color space RGB:888/32):
   1440 x 2560
   1600 x 2560
   1773 x 2364
+
+
+== Authors
+
+* David Crosby (crosby@atomicobject.com)
+* Bill Bereza (bereza@atomicobject.com)
+* © 2002-2011 {Atomic Object}[http://www.atomicobject.com]
+* More Atomic Object {open source}[http://www.atomicobject.com/pages/Software+Commons] projects
 
 == Credits
 
