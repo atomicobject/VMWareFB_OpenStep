@@ -3,6 +3,10 @@
 The code here may be used/distributed under the terms of the standard
 XFree86 license.
 
+_Note: This project is no longer actively maintained. If you're
+interested in taking ownership of this code, contact David Crosby
+(crosby@atomicobject.com)._
+
 == Overview
 
 VMWareFB is an OpenStep display driver written to support the virtual
